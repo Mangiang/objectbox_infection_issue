@@ -1,16 +1,20 @@
 # objectbox_infection_issue
 
-Replication for Objectbox infection flagging issue
+## Requirements
+| Item                   | Version                                    |
+| ---------------------- | ------------------------------------------ |
+| Platform               | Windows 10                                 |
+| Flutter                | 3.0.5                                      |
+| Bitdefender            | database up to date                        |
+| Objectbox dependencies | versions in [pubspec.yaml](./pubspec.yaml) |
 
-## Getting Started
+## Replicating the issue
+1. Execute `flutter pub get`
+2. Execute `flutter run -d windows`
+3. Notice Bitdefender (Antivirus feature) Report
+   ![Bitdefender report](./docs/bitdefender_report.png)
 
-This project is a starting point for a Flutter application.
+4. Notice error in the console due to the antivirus moving the file into quarantine
+   ![console output](./docs/console_output.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+5. Send the file to VirusTotal for analysis and notice the [report](https://www.virustotal.com/gui/file/e44b13cf2eb654ecc2e71838572b4de3faa6777620f11438c829e9d8f349cf4a?nocache=1)
