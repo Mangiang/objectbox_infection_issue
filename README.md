@@ -1,4 +1,4 @@
-# [Reolved] objectbox_infection_issue
+# [Resolved] objectbox_infection_issue
 
 This issue was resolved see [this discussion](https://github.com/objectbox/objectbox-dart/issues/462).
 
